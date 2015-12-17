@@ -15,26 +15,21 @@ handlers:
 - url: /login.*
   script: main.app
   secure: always
-  login: admin
 
 - url: /signup.*
   script: main.app
   secure: always
-  login: admin
 
 - url: /user_settings.*
   script: main.app
   secure: always
-  login: admin
 
 - url: /contact.*
   script: main.app
   secure: always
-  login: admin
 
 - url: .*
   script: main.app
-  login: admin
 
 libraries:
 - name: jinja2
