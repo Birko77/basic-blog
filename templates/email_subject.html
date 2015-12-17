@@ -1,0 +1,5 @@
+{% if subject_type == 'welcome' %}Your Blog-account has been created
+{% elif subject_type == 'account_deleted' %}Your Blog-account has been deleted
+{% elif subject_type == 'email_changed' %}This email address has been associated with your Blog-account
+{% elif subject_type == 'forgot_password' %}Reset password of your Blog-account
+{% elif subject_type == 'recommend_joe' %}{{sender}} recommends Blog{% endif %}

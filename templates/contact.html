@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+	Contact
+{% endblock page_title %}
+
+{% block back_link %}
+	<a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+{% endblock back_link %}
+
+
+{% block content %}
+	<br>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div class="text-box">
+				<h1><strong>Contact <span class="blue-text">Blog</span></strong></h1>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="transp-box">
+				<br>
+				<form class="form-horizontal" method="post" role="form" onsubmit="return checkForm(this);">
+				  	<div class="form-group">
+				    	<label for="inputEmail" class="col-sm-2 control-label">Your email address</label>
+				    	<div class="col-sm-10">
+				      		<input type="email" class="form-control" id="inputEmail" placeholder="Your email address" name="email" value="{{email_form}}">
+				      		{% if error_email %}
+				      			<span class="error_message">Invalid email.</span>
+				      		{% endif %}
+				    	</div>
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="inputSubject" class="col-sm-2 control-label">Subject</label>
+				    	<div class="col-sm-10">
+				      		<input type="text" class="form-control" maxlength="78" id="inputSubject" placeholder="Subject" name="subject" value="{{subject_form}}">
+				      		{% if error_subject %}
+				      			<span class="error_message">Please enter a subject. (max. 78 characters)</span>
+				      		{% endif %}
+				    	</div>
+				  	</div>
+				    <div class="form-group">
+				        <label for="inputContent" class="col-sm-2 control-label">Message</label>
+				        <div class="col-sm-10">
+				        	<textarea class="form-control" rows="5" maxlength="1000" id="inputContent" placeholder="Your message" name="content">{{content_form}}</textarea>
+				            {% if error_content %}
+				            	<span class="error_message">Please enter a message. (max. 1000 characters)</span>
+				            {% endif %}
+				        </div>
+				    </div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="privacy" class="big_check">
+									I agree with the <a class="blue-text" href="/privacy">Privacy policy</a> and the <a class="blue-text" href="/terms">Terms of use</a>.
+								<label>
+							</div>
+						</div>
+					</div>
+				  	<div class="form-group">
+				    	<div class="col-sm-offset-2 col-sm-10">
+				    		<input type="hidden" name="state" value="{{state}}">
+				      		<button type="submit" class="btn btn-default">Send</button><br>
+				      		{% if success_message %}
+				      			<span class="message">Thanks for your message.</span>
+				      		{% endif %}
+				    	</div>
+				  	</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<br>
+{% endblock content %}
+
+
+
+{% block javascript %}
+	<script type="text/javascript">
+		function checkForm(form) {
+			if(!form.privacy.checked) {
+				alert("Please confirm that you agree with the Privacy policy and the Terms of use.");
+				form.privacy.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+{% endblock javascript %}

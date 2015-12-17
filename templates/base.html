@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:700,400' rel='stylesheet' type='text/css'/>
+		<title>{% block page_title %}{% endblock page_title %}</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+  		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+		<link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css" >
+	</head>
+
+	<body class="background_grey background_image_1 normal_font">
+
+		<!-- Header -->
+
+		<nav class="navbar navbar-default navbar-fixed-top custom_navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<span class="dropdown text-left to_left">
+							<a href="#" class="dropdown-toggle custom_link_navbar" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+						        <li><a class="custom_link_navbar" href="/">Home</a></li>
+						        <li class="divider"></li>
+								<li><a class="custom_link_navbar" href="/new_article">New Article</a></li>
+						        <li class="divider"></li>
+								<li><a class="custom_link_navbar" href="/about">About</a></li>
+								<li class="divider"></li>
+								<li><a class="custom_link_navbar" href="/contact">Contact</a></li>
+								<li><a class="custom_link_navbar" href="/terms">Terms of use</a></li>
+								<li><a class="custom_link_navbar" href="/privacy">Privay policy</a></li>
+						    </ul>
+						    {% block back_link %}{% endblock back_link %}
+						</span>
+
+						{% if user %}
+							<span class="dropdown text-right to_right">
+								<a href="#" class="dropdown-toggle custom_link_navbar" data-toggle="dropdown">
+									<span>{{user.name[0:11]}}</span>  <!--Show only the first 12 characters of the username-->
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right" role="menu">
+						            <li><a class="custom_link_navbar" href="/user_settings">Settings</a></li>
+						            <li class="divider"></li>
+						            <li><a class="custom_link_navbar" href="/logout">Logout</a></li>
+						        </ul>
+							</span>
+						{% endif %}
+						{% if not user %}
+							<span class="dropdown text-right to_right">
+								<a href="#" class="dropdown-toggle custom_link_navbar" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right" role="menu">
+						            <li><a class="custom_link_navbar" href="/login">Login</a></li>
+						            <li class="divider"></li>
+						            <li><a class="custom_link_navbar" href="/signup">Signup</a></li>
+						        </ul>
+							</span>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="below_custom_header">
+			<div class="container">
+
+				<!-- Content -->
+
+				{% block content %}{% endblock content %}
+
+				<!-- Footer -->
+
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<a class="black-text" href="/contact">Contact</a>
+						<span class="black-text"> | </span>
+						<a class="black-text" href="/terms">Terms of use</a>
+						<span class="black-text"> | </span>
+						<a class="black-text" href="/privacy">Privay policy</a>
+					</div>
+				</div>
+				<br>
+
+			</div>
+		</div>
+		
+		
+
+
+
+		{% block javascript %}{% endblock javascript %}
+
+	</body>
+</html>
+

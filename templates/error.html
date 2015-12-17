@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+	An error has occured
+{% endblock page_title %}
+
+
+{% block back_link %}
+	<a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+{% endblock back_link %}
+
+
+{% block content %}
+	<br>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div class="text-box">
+				<h3>Unfortunately an error has occured.</h3>
+				<h4>An internal log-entry has been created so that we can solve this problem quickly.</h4>
+			</div>
+		</div>
+	</div>
+	<br>
+{% endblock content %}

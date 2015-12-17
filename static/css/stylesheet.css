@@ -1,0 +1,164 @@
+/*General*/
+
+.normal_font{
+	font-family: 'Roboto Slab', serif; 
+}
+
+.background_grey{
+	background: #f0f0f0
+}
+
+.background_image_1{
+    background-image: url('/static/images/background1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+
+.twitter_img{
+	height: 20px;
+}
+
+.facebook_img{
+	height: 20px;
+}
+
+
+.custom_navbar{
+	background: #c8c8c8;
+	min-height: 41px;
+	height: 41px;
+	border-color: #333;
+}
+
+.custom_link_navbar{
+	display: inline-block;
+/*	width: 150px;*/
+	padding: 0px 15px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	font-size: 20px;
+}
+
+.custom_link_navbar:hover{
+	text-decoration: none;
+	color: #333;
+	background-color: #a8a8a8;
+}
+
+.custom_link_navbar:focus{
+	text-decoration: none;
+	color: #333;
+}
+
+.custom_text_navbar{
+	display: inline;
+	line-height: 40px;
+	color: #333;
+	font-size: 20px;
+}
+
+.below_custom_header{
+	position: relative;
+	top: 41px;
+}
+
+.text-box{
+	background-color: white;
+	border-radius: 6px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.transp-box{
+	background-color: rgba(100%, 100%, 100%, .6);
+	border-radius: 6px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.white-text{
+	color: white;
+}
+
+.red-text{
+	color: red;
+}
+
+.green-text{
+	color: lime;
+}
+
+.yellow-text{
+	color: yellow;
+}
+
+.black-text{
+	color: black;
+}
+
+.blue-text{
+	color: #0084FF;
+}
+
+.error_message{
+	color: red;
+	font-family: arial;
+	font-size: 16px;
+}
+
+.input_guide{
+	color: black;
+	font-family: arial;
+	font-size: 12px;
+}
+
+.message{
+	color: green;
+	font-size: 16px;
+}
+
+.message_page{
+	font-size: 20px;
+}
+
+.padding_10px{
+	padding: 10px;
+}
+
+.wrap-text{
+	white-space: normal;
+}
+
+.transparent{
+	opacity: 0.4;
+}
+
+.to_left{
+	float: left;
+}
+
+.to_right{
+	float: right;
+}
+
+.big_check{
+	height: 18px;
+	width: 18px;
+}
+
+.underline{
+	border-bottom: 1px solid;
+	padding-bottom: 5px;
+}
+
+.white_space{
+	white-space: pre-wrap;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}

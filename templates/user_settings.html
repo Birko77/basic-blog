@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+	User settings
+{% endblock page_title %}
+
+{% block back_link %}
+	<a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+{% endblock back_link %}
+
+
+{% block content %}
+	<br>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div class="text-box">
+				<h1><strong>User settings</strong></h1>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div class="transp-box">
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 text-center">
+						<br>
+						<a class="btn btn-default btn-lg btn-block" href="/user_settings/change_password">Change password</a>
+						<br>
+						<a class="btn btn-default btn-lg btn-block" href="/user_settings/change_email">Change email</a>
+						<br>
+						<a class="btn btn-default btn-lg btn-block" href="/user_settings/change_username">Change username</a>
+						<br>
+						<a class="btn btn-default btn-lg btn-block" href="/user_settings/delete_account">Delete account</a>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+{% endblock content %}
+
+
+
