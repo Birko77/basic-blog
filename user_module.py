@@ -244,7 +244,6 @@ class ForgotPasswordHandler(Handler):
                 self.render('message.html', 
                             input_email = input_email, 
                             message_forgot_password_2 = True)
-                logging.error(link)
 
 
 class ResetPasswordHandler(Handler):

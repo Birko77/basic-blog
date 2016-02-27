@@ -1,19 +1,11 @@
-/*General*/
 
 .normal_font{
-	font-family: 'Roboto Slab', serif; 
+	font-family: 'Roboto Slab', serif;
+	color: #333; 
 }
 
 .background_grey{
-	background: #f0f0f0
-}
-
-.background_image_1{
-    background-image: url('/static/images/background1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-size: cover;
+	background: #EBF5EE
 }
 
 .twitter_img{
@@ -24,9 +16,8 @@
 	height: 20px;
 }
 
-
 .custom_navbar{
-	background: #c8c8c8;
+	background: #BFA89E;
 	min-height: 41px;
 	height: 41px;
 	border-color: #333;
@@ -34,7 +25,6 @@
 
 .custom_link_navbar{
 	display: inline-block;
-/*	width: 150px;*/
 	padding: 0px 15px;
 	line-height: 40px;
 	text-align: center;
@@ -46,7 +36,7 @@
 .custom_link_navbar:hover{
 	text-decoration: none;
 	color: #333;
-	background-color: #a8a8a8;
+	background-color: #8B786D;
 }
 
 .custom_link_navbar:focus{
@@ -67,15 +57,15 @@
 }
 
 .text-box{
-	background-color: white;
-	border-radius: 6px;
+	background-color: #78A1BB;
+	border-radius: 0px;
 	padding-top: 1px;
 	padding-bottom: 1px;
 }
 
 .transp-box{
-	background-color: rgba(100%, 100%, 100%, .6);
-	border-radius: 6px;
+	background-color: #78A1BB;
+	border-radius: 0px;
 	padding-top: 1px;
 	padding-bottom: 1px;
 }
