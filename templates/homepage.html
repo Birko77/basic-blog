@@ -1,113 +1,113 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-	Blog
+    Blog
 {% endblock page_title %}
 
 {% block content %}
-	<br>
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div class="text-box">
-				<h1 class="blue-text"><strong>Blog</strong></h1>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div class="transp-box">
-				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1 text-center">
-						<br>
-						<a class="btn btn-default btn-lg btn-block" href="/new_article"><span class="wrap-text">New Article</span></a>
-						<br>
-					</div>
-				</div>
-			</div> 
-		</div>
-	</div>
-	{% for article in  article_list %}
-	<br>
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="transp-box">
-				<div class="padding_10px">
-					<div class="row">
-						<div class="col-xs-12 text-left">
-							<h3 class="underline">{{article.title}}</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 text-left">
-							<p class="white_space">{{article.body}}</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 text-right">
-							<h4>{{article.author_name}}</h4>
-							<h5 id="{{article.key().id()}}">{{article.time}}</h5>
-							<script type="text/javascript">
-								var d = new Date("{{article.time}}")
-								var n = d.toLocaleDateString() + ", " + d.toLocaleTimeString();
-								document.getElementById("{{article.key().id()}}").innerHTML = n;
-							</script>
-						</div>
-					</div>
-				</div>
-				{% if user %}
-					{% if user.key().id() == article.author %}
-						<div class="row">
-							<div class="col-xs-10 col-xs-offset-1 text-center">
-								<br>
-								<a class="btn btn-default btn-lg btn-block" href="/edit_article/?article={{article.key().id()}}"><span class="wrap-text">Edit</span></a>
-								<br>
-							</div>
-						</div>
-					{% endif %}
-				{% endif %}
-			</div>
-		</div>
-	</div>
-	{% endfor %}
-	<br>
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div class="transp-box">
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<h3>Share</h3>
-					</div>
-				</div>
-				<br>
-				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
-						<div class="row">
-							<div class="col-xs-4">
-								<a class="btn btn-default btn-lg btn-block" href="/share/send_email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
-							</div>
-							<div class="col-xs-4">
-								<a class="btn btn-default btn-lg btn-block" 
-								href='http://www.facebook.com/share.php?u=joesgameday.appspot.com'
-								target="_blank">
-									<img class="facebook_img" src='/static/images/FB-f-Logo__blue_50.png' alt='Facebook'>
-								</a>
-							</div>
-							<div class="col-xs-4">
-								<a class="btn btn-default btn-lg btn-block" 
-								href="https://twitter.com/share?text=Checking%20out%20this%20page%3A%20" 
-								target="_blank">
-									<img class="twitter_img" src="/static/images/Twitter_logo_blue.png" alt="Twitter">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<br>
-			</div>
-		</div>
-	</div>
-	<br>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div class="text-box">
+                <h1 class="blue-text"><strong>Blog</strong></h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div class="transp-box">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1 text-center">
+                        <br>
+                        <a class="btn btn-default btn-lg btn-block" href="/new_article"><span class="wrap-text">New Article</span></a>
+                        <br>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    {% for article in  article_list %}
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="transp-box">
+                <div class="padding_10px">
+                    <div class="row">
+                        <div class="col-xs-12 text-left">
+                            <h3 class="underline">{{article.title}}</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-left">
+                            <p class="white_space">{{article.body}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <h4>{{article.author_name}}</h4>
+                            <h5 id="{{article.key().id()}}">{{article.time}}</h5>
+                            <script type="text/javascript">
+                                var d = new Date("{{article.time}}")
+                                var n = d.toLocaleDateString() + ", " + d.toLocaleTimeString();
+                                document.getElementById("{{article.key().id()}}").innerHTML = n;
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                {% if user %}
+                    {% if user.key().id() == article.author %}
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1 text-center">
+                                <br>
+                                <a class="btn btn-default btn-lg btn-block" href="/edit_article/?article={{article.key().id()}}"><span class="wrap-text">Edit</span></a>
+                                <br>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div class="transp-box">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h3>Share</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <a class="btn btn-default btn-lg btn-block" href="/share/send_email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a class="btn btn-default btn-lg btn-block" 
+                                href='http://www.facebook.com/share.php?u=joesgameday.appspot.com'
+                                target="_blank">
+                                    <img class="facebook_img" src='/static/images/FB-f-Logo__blue_50.png' alt='Facebook'>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a class="btn btn-default btn-lg btn-block" 
+                                href="https://twitter.com/share?text=Checking%20out%20this%20page%3A%20" 
+                                target="_blank">
+                                    <img class="twitter_img" src="/static/images/Twitter_logo_blue.png" alt="Twitter">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
 
 {% endblock content %}
 

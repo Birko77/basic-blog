@@ -1,95 +1,95 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-	Message
+    Message
 {% endblock page_title %}
 
 
 {% block back_link %}
-	<a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+    <a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 {% endblock back_link %}
 
 
 {% block content %}
-	<br>
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div class="text-box"
-				<h1>{{headline}}</h1>
-				<p class="message_page">{{message}}</p>
-				{% if message_signup_1 %}
-					<p class="message_page">
-						<strong>{{user.name}}</strong> is still logged in. Please log out to signup another user.
-					</p>
-				{% endif %}
-				{% if message_signup_2 %}
-					<p class="message_page">Welcome <strong>{{user.name}}</strong>.</p>
-				{% endif %}
-				{% if message_login_1 %}
-					<p class="message_page">
-						<strong>{{user.name}}</strong> is still logged in. Please log out to login another user.
-					</p>
-				{% endif %}
-				{% if message_forgot_password_1 %}
-					<p class="message_page">
-						<strong>{{user.name}}</strong> is still logged in. If you want to reset a password, please logout first. 
-					</p>
-				{% endif %}
-				{% if message_forgot_password_2 %}
-					<p class="message_page">An email with a link to reset the password has been sent to <strong>{{input_email}}</strong>.</p>
-				{% endif %}
-				{% if message_reset_password_1 %}
-					<p class="message_page"><strong>{{user.name}}</strong> is still logged in. If you want to reset a password, please logout first.</p>
-				{% endif %}
-				{% if message_reset_password_2 %}
-					<p class="message_page">This link is not valid.</p>
-				{% endif %}
-				{% if message_reset_password_3 %}
-					<p class="message_page">
-						More than one hour has past since your password reset. Please klick on 'Forgot password' again.
-					</p>
-				{% endif %}
-				{% if message_reset_password_4 %}
-					<p class="message_page">Link is not valid.</p>
-				{% endif %}
-				{% if message_reset_password_5 %}
-					<p class="message_page">An error has occurred. Please contact us via email.</p>
-				{% endif %}
-				{% if message_reset_password_6 %}
-					<p class="message_page">Plesae klick on the link in the email that was sent to you to reset your password. </p>
-				{% endif %}
-				{% if message_reset_password_7 %}
-					<p class="message_page">Password changed.</p>
-				{% endif %}
-				{% if message_user_settings_1 %}
-					<p class="message_page">Please login.</p>
-				{% endif %}
-				{% if message_logout_1 %}
-					<p class="message_page">Logout successful.</p>
-				{% endif %}
-				{% if message_delete_account_1 %}
-					<p class="message_page">Account deleted! A confirmation email was sent to <strong>{{deleted_email}}</strong>.</p>
-				{% endif %}
-				{% if message_send_email_1 %}
-					<p class="message_page">Please login.</p>
-				{% endif %}
-				{% if message_new_article_1 %}
-					<p class="message_page">Please login to create a new article.</p>
-				{% endif %}
-				{% if message_edit_article_1 %}
-					<p class="message_page">Please login to edit an article.</p>
-				{% endif %}
-				{% if message_edit_article_2 %}
-					<p class="message_page">You have no permission to edit this article.</p>
-				{% endif %}
-				{% if message_delete_article %}
-					<p class="message_page">Article deleted.</p>
-				{% endif %}
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div class="text-box"
+                <h1>{{headline}}</h1>
+                <p class="message_page">{{message}}</p>
+                {% if message_signup_1 %}
+                    <p class="message_page">
+                        <strong>{{user.name}}</strong> is still logged in. Please log out to signup another user.
+                    </p>
+                {% endif %}
+                {% if message_signup_2 %}
+                    <p class="message_page">Welcome <strong>{{user.name}}</strong>.</p>
+                {% endif %}
+                {% if message_login_1 %}
+                    <p class="message_page">
+                        <strong>{{user.name}}</strong> is still logged in. Please log out to login another user.
+                    </p>
+                {% endif %}
+                {% if message_forgot_password_1 %}
+                    <p class="message_page">
+                        <strong>{{user.name}}</strong> is still logged in. If you want to reset a password, please logout first. 
+                    </p>
+                {% endif %}
+                {% if message_forgot_password_2 %}
+                    <p class="message_page">An email with a link to reset the password has been sent to <strong>{{input_email}}</strong>.</p>
+                {% endif %}
+                {% if message_reset_password_1 %}
+                    <p class="message_page"><strong>{{user.name}}</strong> is still logged in. If you want to reset a password, please logout first.</p>
+                {% endif %}
+                {% if message_reset_password_2 %}
+                    <p class="message_page">This link is not valid.</p>
+                {% endif %}
+                {% if message_reset_password_3 %}
+                    <p class="message_page">
+                        More than one hour has past since your password reset. Please klick on 'Forgot password' again.
+                    </p>
+                {% endif %}
+                {% if message_reset_password_4 %}
+                    <p class="message_page">Link is not valid.</p>
+                {% endif %}
+                {% if message_reset_password_5 %}
+                    <p class="message_page">An error has occurred. Please contact us via email.</p>
+                {% endif %}
+                {% if message_reset_password_6 %}
+                    <p class="message_page">Plesae klick on the link in the email that was sent to you to reset your password. </p>
+                {% endif %}
+                {% if message_reset_password_7 %}
+                    <p class="message_page">Password changed.</p>
+                {% endif %}
+                {% if message_user_settings_1 %}
+                    <p class="message_page">Please login.</p>
+                {% endif %}
+                {% if message_logout_1 %}
+                    <p class="message_page">Logout successful.</p>
+                {% endif %}
+                {% if message_delete_account_1 %}
+                    <p class="message_page">Account deleted! A confirmation email was sent to <strong>{{deleted_email}}</strong>.</p>
+                {% endif %}
+                {% if message_send_email_1 %}
+                    <p class="message_page">Please login.</p>
+                {% endif %}
+                {% if message_new_article_1 %}
+                    <p class="message_page">Please login to create a new article.</p>
+                {% endif %}
+                {% if message_edit_article_1 %}
+                    <p class="message_page">Please login to edit an article.</p>
+                {% endif %}
+                {% if message_edit_article_2 %}
+                    <p class="message_page">You have no permission to edit this article.</p>
+                {% endif %}
+                {% if message_delete_article %}
+                    <p class="message_page">Article deleted.</p>
+                {% endif %}
 
 
 
-			</div>
-		</div>
-	</div>
-	<br>
+            </div>
+        </div>
+    </div>
+    <br>
 {% endblock content %}

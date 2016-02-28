@@ -1,57 +1,57 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-	Login
+    Login
 {% endblock page_title %}
 
 
 {% block back_link %}
-	<a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+    <a class="custom_link_navbar" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 {% endblock back_link %}
 
 
 {% block content %}
-	<br>
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div class="text-box">
-				<h1><strong>Login</strong></h1>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="transp-box">
-				<br>
-				<form class="form-horizontal" method="post" role="form">
-				  	<div class="form-group">
-				    	<label for="inputEmail" class="col-sm-2 control-label">Email</label>
-				    	<div class="col-sm-10">
-				      		<input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" value="{{email_form}}">
-				    	</div>
-				  	</div>
-				  	<div class="form-group">
-				    	<label for="inputPassword" class="col-sm-2 control-label">Password</label>
-				    	<div class="col-sm-10">
-				      		<input type="password" class="form-control" maxlength="20" id="inputPassword" placeholder="Password" name="password">
-				      		<a class="blue-text" href="/login/forgot_password">Forgot password</a>
-				    	</div>
-				  	</div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div class="text-box">
+                <h1><strong>Login</strong></h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="transp-box">
+                <br>
+                <form class="form-horizontal" method="post" role="form">
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" value="{{email_form}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" maxlength="20" id="inputPassword" placeholder="Password" name="password">
+                            <a class="blue-text" href="/login/forgot_password">Forgot password</a>
+                        </div>
+                    </div>
 
-				  	<div class="form-group">
-				    	<div class="col-sm-offset-2 col-sm-10">
-				    		<input type="hidden" name="state" value="{{state}}">
-				      		<button type="submit" class="btn btn-default">Login</button><br>
-				      		{% if error %}
-				      			<span class="error_message">Login was not successful.<br>Please try again or klick on 'Forgot password'.</span>
-				      		{% endif %}
-				    	</div>
-				  	</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<br>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="hidden" name="state" value="{{state}}">
+                            <button type="submit" class="btn btn-default">Login</button><br>
+                            {% if error %}
+                                <span class="error_message">Login was not successful.<br>Please try again or klick on 'Forgot password'.</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
 
 {% endblock content %}
